@@ -34,3 +34,33 @@
         digitalWrite(input4,LOW); 
       delay(temp);
       }
+
+void setup() {
+#define input1 10 //motor esquerdo
+#define input2 9 //motor esquerdo
+#define input3 10  //motor direito
+#define input4 11 //motor direito
+ int temp;        //tempo que sera mandado em milisegundos
+#define enable1 6  //motor esquerdo
+#define enable2 7  //motor direito
+
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(input1,OUTPUT);  //declarando todos os pinos como saida de corrente
+  pinMode(input2, OUTPUT);
+  pinMode(input3, OUTPUT);
+  pinMode(input4, OUTPUT);
+  pinMode(enable1, OUTPUT);
+  pinMode(enable2, OUTPUT);
+  digitalWrite(enable1,HIGH);
+  digitalWrite(enable2,HIGH);
+  
+}
+
+
+void loop() {
+    frente(1000);
+    parar(2000);
+    
+  }
